@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakelaarsList", "MakelaarsList\MakelaarsList.csproj", "{F9E426EE-0C7D-4574-91E3-FEEE5D1FD6C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9E426EE-0C7D-4574-91E3-FEEE5D1FD6C6}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{F9E426EE-0C7D-4574-91E3-FEEE5D1FD6C6}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{F9E426EE-0C7D-4574-91E3-FEEE5D1FD6C6}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{F9E426EE-0C7D-4574-91E3-FEEE5D1FD6C6}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D0A408E-5727-4033-8067-073BAE3262B2}
+	EndGlobalSection
+EndGlobal
