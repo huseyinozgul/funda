@@ -49,7 +49,7 @@ namespace MakelaarsList.Services
 
             this.treshold = config.GetValue<int>("FeedService:Treshold");
             this.tresholdTimeAsSecond = config.GetValue<int>("FeedService:TresholdTimeAsSecond");
-            
+
         }
 
         #endregion
@@ -58,21 +58,22 @@ namespace MakelaarsList.Services
 
         private void CheckTreshold()
         {
-            if (lastRequestTime.Year == 1)
-            {
-                lastRequestTime = DateTime.Now;
-            }
-
-            var currentTime = DateTime.Now;
-            TimeSpan timeSpan = currentTime - lastRequestTime;
-
-            if (counter >= treshold && timeSpan.TotalSeconds <= tresholdTimeAsSecond)
-            {
-                throw new Exception("Too many API requests in a short period!");
-            }
-
             lock (counterLock)
             {
+                if (lastRequestTime.Year == 1)
+                {
+                    lastRequestTime = DateTime.Now;
+                }
+
+                var currentTime = DateTime.Now;
+                TimeSpan timeSpan = currentTime - lastRequestTime;
+
+                if (counter >= treshold && timeSpan.TotalSeconds <= tresholdTimeAsSecond)
+                {
+                    throw new Exception("Too many API requests in a short period!");
+                }
+
+
                 if (timeSpan.TotalSeconds > tresholdTimeAsSecond)
                 {
                     counter = 0;

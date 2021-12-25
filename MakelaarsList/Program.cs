@@ -56,13 +56,13 @@ namespace MakelaarsList
                 Log.Information("Getting Makelaars");
 
                 await feedService.ShowMakelaars(onlyHasGarden: false, top: 10);
-                // await feedService.ShowMakelaars(onlyHasGarden: true, top: 10);
+                await feedService.ShowMakelaars(onlyHasGarden: true, top: 10);
 
                 Log.Information("Ending...");
             }
             catch (Exception ex)
             {
-                Log.Fatal(ex, "Error running service");
+                Log.Fatal(ex.ToString());
                 throw ex;
             }
             finally
