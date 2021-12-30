@@ -63,7 +63,6 @@ namespace MakelaarsList
             catch (Exception ex)
             {
                 Log.Fatal(ex.ToString());
-                throw ex;
             }
             finally
             {
