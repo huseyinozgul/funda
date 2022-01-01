@@ -49,7 +49,7 @@ namespace MakelaarsList
 
             IServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
 
-            IFeedService feedService = serviceProvider.GetService<FeedService>();
+            IFeedService feedService = serviceProvider.GetService<IFeedService>();
 
             try
             {
@@ -85,8 +85,8 @@ namespace MakelaarsList
                 .Build();
 
             serviceCollection.AddSingleton(configuration);
-            serviceCollection.AddTransient<FeedServiceClient>();
-            serviceCollection.AddTransient<FeedService>();
+            serviceCollection.AddTransient<IFeedServiceClient,FeedServiceClient>();
+            serviceCollection.AddTransient<IFeedService, FeedService>();
 
         }
     }
