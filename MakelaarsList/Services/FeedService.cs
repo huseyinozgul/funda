@@ -22,7 +22,7 @@ namespace MakelaarsList.Services
 
         #region Constructor
 
-        public FeedService(IConfigurationRoot config, ILoggerFactory loggerFactory, FeedServiceClient feedServiceClient)
+        public FeedService(IConfigurationRoot config, ILoggerFactory loggerFactory, IFeedServiceClient feedServiceClient)
         {
             this.config = config;
             this.logger = loggerFactory.CreateLogger<FeedService>();
